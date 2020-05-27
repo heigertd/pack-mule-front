@@ -18,10 +18,11 @@ export default function SignUp() {
 
     const handleFormSubmit = event => {
         event.preventDefault();
-        API.createNewHiker(newUserState).then(newHiker => {
-            console.log('success', newHiker)
-            history.push('/hikers')
-        })
+        // API.createNewHiker(newUserState).then(newHiker => {
+        //     console.log('success', newHiker)
+        //     history.push('/hikers')
+        // })
+        history.push('/hikers')
     }
 
     return (

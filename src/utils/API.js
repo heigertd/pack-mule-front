@@ -7,5 +7,10 @@ export default {
 
     createNewHiker: function(newHiker){
         return axios.post('http://localhost:8080/api/hikers', newHiker)
-    }
+    },
+
+    // getSearchedHiker: function(searchInput){
+    //     console.log('input', searchInput)
+    //     return axios.get('http://localhost:8080/api/search', searchInput)
+    // }
 }
