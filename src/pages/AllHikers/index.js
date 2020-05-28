@@ -12,6 +12,8 @@ export default function AllHikers() {
         })
     },[])
     
+    
+
     return (
         <div>
             <NavBar />

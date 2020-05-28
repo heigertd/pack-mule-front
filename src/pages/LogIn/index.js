@@ -1,7 +1,11 @@
-import React, {useState} from 'react'
+import React, {useState} from 'react';
+import {useHistory} from 'react-router-dom';
+import API from '../../utils/API';
 import './style.css'
 
 export default function LogIn() {
+
+    let history = useHistory();
 
     const [loginState, setLoginState] = useState()
 
@@ -10,6 +14,29 @@ export default function LogIn() {
         setLoginState({
             ...loginState,
             [name]: value
+        })
+    }
+
+    const handleLogIn = event => {
+        event.preventDefault();
+        API.logInHiker(loginState).then(newHiker => {
+            // console.log(newHiker.data)
+            switch(newHiker.data){
+                case false:
+                    console.log(newHiker.data)
+                    break;
+                        
+                default:
+                    history.push('/hikers')
+                    break;            
+            }
+            
+        })
+    }
+
+    const readSessions =()=>{
+        API.readSessions().then(res =>{
+            console.log(res.data)
         })
     }
 
@@ -23,9 +50,11 @@ export default function LogIn() {
                     </div>
                     <div className='login-input-div'>
                         <lable for = 'password'>Password</lable>
-                        <input name = 'password' type = 'text' onChange = {handleInputChange}></input>
+                        <input name = 'password' type = 'password' onChange = {handleInputChange}></input>
                     </div>
+                    <button onClick = {handleLogIn}>LogIn</button>
                 </form>
+                <button onClick = {readSessions}>check log in</button>
             </div>
             <div>
                 <p>Need an account? <a href= '/signup'>Sign Up here!</a></p>
