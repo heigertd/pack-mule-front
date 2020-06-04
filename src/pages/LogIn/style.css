@@ -1,4 +1,118 @@
+.login-render-div{
+    height: 100vh;
+    width: 100vw;
+    background-color: rgb(250, 242, 235);
+    margin: 0;
+}
+
 .login-input-div{
     display: flex;
     flex-direction: column;
+    width: 100%;
+    margin-top: 7px;
+}
+
+.login-input-field{
+    height: 40px;
+    font-size: large;
+}
+
+.login-div{
+    width: 100vw;
+    margin: 0 auto;
+    position: relative;
+    padding: 10px 10px 20px 10px;
+    /* border: 2px solid rgb(119, 119, 119); */
+    border-radius: 10px 10px;
+    box-shadow: 1px 2px 3px grey;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.login-form-div{
+    width: 33%;
+    margin: 0 auto;
+    position: relative;
+    padding: 10px 10px 20px 10px;
+    border: 2px solid rgb(243, 243, 243);
+    border-radius: 10px 10px;
+    box-shadow: 1px 2px 3px grey;
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    background-color: white;
+}
+
+.login-page{
+    display: flex;
+    width: 100vw;
+    height: 80vh;
+    /* width: 80vw; */
+    justify-content: center;
+    flex-direction: column;
+    /* justify-content: start; */
+    align-items: center;
+    
+}
+
+.login-button{
+    background-color: orange;
+    width: 33%;
+    margin-top: 7px;
+    padding: 5px;
+    border: 2px solid orange;
+    border-radius: 5px 5px;
+    box-shadow: 1px 2px 3px grey;
+    font-family: 'Expletus Sans', cursive;
+}
+
+.login-form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Expletus Sans', cursive;
+    
+}
+
+.login-header{
+    font-family: 'Permanent Marker', cursive;
+    font-size: 120%;
+    display:flex;
+    justify-content: center;
+    width: 99.6vw;
+    background-color: orange;
+    padding-left: 5px;
+    border-radius: 0px 0px 10px 10px;
+}
+
+@media only screen and (max-width: 1024px){
+    .login-form-div{
+        width: 90vw;
+        margin: 0 auto;
+        position: relative;
+        padding: 10px 10px 20px 10px;
+        border: 2px solid rgb(243, 243, 243);
+        border-radius: 10px 10px;
+        box-shadow: 1px 2px 3px grey;
+        display: flex;
+        flex-direction: column;
+        background-color: white;
+    }
+
+    .login-render-div{
+        height: 100vh;
+        width: 100vw;
+        background-color: rgb(250, 242, 235);
+    }
+
+    .login-header{
+        font-family: 'Permanent Marker', cursive;
+        font-size: 120%;
+        display:flex;
+        width: 98.5vw;
+        background-color: orange;
+        padding-left: 5px;
+        border-radius: 0px 0px 10px 10px;
+    }
 }
