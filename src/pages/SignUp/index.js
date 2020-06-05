@@ -26,47 +26,54 @@ export default function SignUp() {
     }
 
     return (
-        <div>
-            <form>
-                <div className = 'signup-input-div'>
-                    <label for='name'>Name</label>
-                    <input name='name' type='text' onChange={handleInputChange}></input>
+        <div className = 'signup-render-div'>
+            <div className = 'signup-header'>
+                {/* <h1>Pack Mule</h1> */}
+                <h1>Sign Up</h1>
+            </div>
+            <div className = 'signup-page'>
+                <div className = 'signup-form-div'>
+                    <form className = 'signup-form'>
+                        <div className = 'signup-input-div'>
+                            {/* <label for='name'>Name</label> */}
+                            <input className = 'signup-input-field' name='name' type='text' placeholder = 'Name' onChange={handleInputChange}></input>
+                        </div>
+                        <div className = 'signup-input-div'>
+                            {/* <label for='hiker_type'>Type of Hiker</label> */}
+                            <input className = 'signup-input-field' name='hiker_type' type='text' placeholder = 'Type of Hiker' onChange={handleInputChange}></input>
+                        </div>         
+                        <div className = 'signup-input-div'>
+                            {/* <label for='experience'>Experience</label> */}
+                            <input className = 'signup-input-field' name='experience' type='text' placeholder = 'Experience' onChange={handleInputChange}></input>
+                        </div>
+                        {/* <div className = 'signup-input-div'>
+                            <input className = 'signup-input-field' name= 'fav_hikes' type = 'text' placeholder = 'Favorite Hike' onChange={handleInputChange}></input>
+                        </div> */}
+                        <div className = 'signup-input-div'>
+                            {/* <label for='username'>Username</label> */}
+                            <input className = 'signup-input-field' name = 'username' type = 'text' placeholder = 'Username' onChange={handleInputChange}></input>
+                        </div>
+                        <div className = 'signup-input-div'>
+                            {/* <label for='email'>Email</label> */}
+                            <input className = 'signup-input-field' name = 'email' type = 'text' placeholder = 'Email' onChange={handleInputChange}></input>
+                        </div>
+                        <div className = 'signup-input-div'>
+                            {/* <label for='password'>Password</label> */}
+                            <input className = 'signup-input-field' name = 'password' type = 'password' placeholder = 'Password' onChange={handleInputChange}></input>
+                        </div>
+                        <div className = 'signup-input-div'>
+                            {/* <label for='age'>Age</label> */}
+                            <input className = 'signup-input-field' name = 'age' placeholder = 'Age' onChange={handleInputChange}></input>
+                        </div>
+                        <div className = 'signup-input-div'>
+                            {/* <label for='fun_fact'>Fun Fact</label> */}
+                            <textarea className = 'signup-input-field' name = 'fun_fact' type = 'text' placeholder = 'Quick Bio' onChange={handleInputChange}></textarea>
+                        </div>
+                                   
+                        <button className = 'signup-button' onClick = {handleFormSubmit}>Submit</button>
+                    </form>
                 </div>
-                <div className = 'signup-input-div'>
-                    <label for='hiker_type'>Type of Hiker</label>
-                    <input name='hiker_type' type='text' onChange={handleInputChange}></input>
-                </div>         
-                <div className = 'signup-input-div'>
-                    <label for='experience'>Experience</label>
-                    <input name='experience' type='text' onChange={handleInputChange}></input>
-                </div>
-                <div className = 'signup-input-div'>
-                    <label for='fav_hikes'>Favorite Hike</label>
-                    <input name= 'fav_hikes' type = 'text' onChange={handleInputChange}></input>
-                </div>
-                <div className = 'signup-input-div'>
-                    <label for='username'>Username</label>
-                    <input name = 'username' type = 'text' onChange={handleInputChange}></input>
-                </div>
-                <div className = 'signup-input-div'>
-                    <label for='email'>Email</label>
-                    <input name = 'email' type = 'text' onChange={handleInputChange}></input>
-                </div>
-                <div className = 'signup-input-div'>
-                    <label for='password'>Password</label>
-                    <input name = 'password' type = 'password' onChange={handleInputChange}></input>
-                </div>
-                <div className = 'signup-input-div'>
-                    <label for='age'>Age</label>
-                    <input name = 'age' onChange={handleInputChange}></input>
-                </div>
-                <div className = 'signup-input-div'>
-                    <label for='fun_fact'>Fun Fact</label>
-                    <input name = 'fun_fact' type = 'text' onChange={handleInputChange}></input>
-                </div>
-                
-                <button onClick = {handleFormSubmit}>Submit</button>
-            </form>
+            </div>
         </div>
     )
 }

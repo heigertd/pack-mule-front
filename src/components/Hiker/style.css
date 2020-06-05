@@ -4,17 +4,36 @@
     display: flex;
     border-radius: 0px 10px 10px 0px;
     box-shadow: 1px 2px 3px grey;
+    background: white;
+    height: 10vh;
 }
 
 .img-div{
-    width: 33%
+    /* width: 20% */
 }
 
 .img{
-    width: 100%;
+    width: auto;
     height: 100%
 }
 
 .txt-div{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 90%;
+    text-align: center;
     padding-left: 3px;
+    font-family: 'Expletus Sans', cursive;
+}
+
+.see-more{
+    background-color: orange;
+    width: 15%;
+    margin: 0px;
+    padding: 5px;
+    border: 2px solid orange;
+    border-radius: 10px 10px;
+    /* box-shadow: 1px 2px 3px grey; */
+    font-family: 'Expletus Sans', cursive;
 }
