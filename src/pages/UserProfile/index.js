@@ -21,21 +21,33 @@ export default function UserProfile() {
         })
     }
 
+    function updateUser(){
+        history.push('/updateuser')
+    }
+
     // console.log('current user state', currentUserState)
 
     return (
-        <div>
-            <NavBar />
+        <div className = 'profile-render-div'>
+            <div className = 'profile-header'>
+                    <a className = 'profile-link' href='/hikers'>Mules</a>
+            </div>
             {currentUserState && currentUserState.user && 
             <div>
-                <h1>hello {currentUserState.user.name}</h1> 
+                <div className = 'hello-div'>
+                    <h1>Hello {currentUserState.user.name}</h1>
+                    <img className = 'img' src={require ('../../assets/default.jpg')} alt = 'profil picture' />
+                </div>
+            <div className = 'user-info-div'>
                 <h3>Hiker Type: {currentUserState.user.hiker_type}</h3>
-                <h3>Favorite Hike: {currentUserState.user.fav_hike}</h3>
+                {/* <h3>Favorite Hike: {currentUserState.user.fav_hike}</h3> */}
                 <h3>Experience: {currentUserState.user.experience}</h3>
                 <h3>Fun Fact: {currentUserState.user.fun_fact}</h3>
                 <h3>Email: {currentUserState.user.email}</h3>
                 <h3>Username: {currentUserState.user.username}</h3>
-                <button onClick = {deleteUser}>Delete</button>
+                <button className = 'delete-button' onClick = {deleteUser}>Delete Profile</button>
+                <button className = 'delete-button' onClick = {updateUser}>Update Info</button>
+            </div>
             </div>
             }
         </div>

@@ -10,7 +10,7 @@ export default {
     },
 
     logInHiker: function(logInInput){
-        // console.log('input', logInInput)
+        console.log('input', logInInput)
         return axios.post('http://localhost:8080/login', logInInput, {withCredentials: true})
     },
 
@@ -26,5 +26,14 @@ export default {
 
     readSessions: function(){
         return axios.get('http://localhost:8080/readsessions', {withCredentials: true})
+    },
+
+    updateUserInfo: function(newInfo, userId){
+        console.log(newInfo, userId)
+        return axios.put(`http://localhost:8080/updatehiker/${userId}`, newInfo, {withCredentials: true})
+    },
+
+    signOut: function(){
+        return axios.get(`http://localhost:8080/signout`, {withCredentials: true})
     }
 }

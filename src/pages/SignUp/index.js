@@ -67,7 +67,7 @@ export default function SignUp() {
                         </div>
                         <div className = 'signup-input-div'>
                             {/* <label for='fun_fact'>Fun Fact</label> */}
-                            <textarea className = 'signup-input-field' name = 'fun_fact' type = 'text' placeholder = 'Quick Bio' onChange={handleInputChange}></textarea>
+                            <textarea className = 'signup-input-field' name = 'fun_fact' type = 'text' placeholder = 'Quick Bio (Years hiking, favorite hike, fun fact etc.)' onChange={handleInputChange}></textarea>
                         </div>
                                    
                         <button className = 'signup-button' onClick = {handleFormSubmit}>Submit</button>

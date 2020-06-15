@@ -1,10 +1,13 @@
 import React, {useState, useEffect} from 'react';
+import {useHistory} from 'react-router-dom';
 import Hiker from '../../components/Hiker';
 import API from '../../utils/API';
 import './style.css'
 import NavBar from '../../components/NavBar';
 
 export default function AllHikers() {
+    let history = useHistory();
+    
     const [hikersState, setHikersState] = useState([]);
     const[clickedHikerState, setClickedHikerState] = useState();
     const[searchState, setSearchState] = useState();
@@ -46,11 +49,18 @@ export default function AllHikers() {
         })
     }
 
+    function signOut(){
+        API.signOut().then(
+            history.push('/')
+        )
+    }
+
     return (
         <div className='allhikers-render-div'> 
                 <div className = 'hiker-navbar'>
                     {/* <h1>Hikers</h1> */}
                     <a className = 'profile-link' href='/userprofile'>Profile</a>
+                    <a className = 'profile-link' onClick = {signOut}>Sign Out</a>
                     <input name='search' type='text' placeholder = 'Search Mules' onChange = {handleInputChange} ></input>
                 </div>
             <div className = 'allhikers-div'>

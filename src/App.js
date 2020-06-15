@@ -5,6 +5,7 @@ import SignUp from './pages/SignUp';
 import LogIn from './pages/LogIn';
 import UserProfile from './pages/UserProfile';
 import NavBar from './components/NavBar';
+import UpdateUser from './pages/UpdateUser';
 
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
       <Route exact path='/hikers' component={AllHikers} />
       <Route exact path='/signup' component={SignUp} />
       <Route exact path='/userprofile' component={UserProfile} />
+      <Route exact path='/updateuser' component={UpdateUser} />
     </Router>
     // <NavBar />
   );

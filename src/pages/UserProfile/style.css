@@ -1,0 +1,46 @@
+.profile-render-div{
+    width: 100vw;
+}
+
+.profile-header{
+    font-family: 'Permanent Marker', cursive;
+    font-size: 120%;
+    display:flex;
+    justify-content: space-around;
+    /* align-items: baseline; */
+    width: 99.6vw;
+    background-color: orange;
+    padding-left: 5px;
+    border-radius: 0px 0px 10px 10px;
+}
+
+.delete-button{
+    background-color: orange;
+    width: 33%;
+    margin-top: 7px;
+    padding: 5px;
+    border: 2px solid orange;
+    border-radius: 5px 5px;
+    box-shadow: 1px 2px 3px grey;
+    font-family: 'Expletus Sans', cursive;
+}
+
+.hello-div{
+    text-align: center;
+}
+
+.user-info-div{
+    width: 90%;
+    margin: 0 auto;
+    position: relative;
+    padding: 10px 10px 20px 10px;
+    border: 2px solid rgb(243, 243, 243);
+    border-radius: 10px 10px;
+    box-shadow: 1px 2px 3px grey;
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    background-color: white;
+    font-family: 'Expletus Sans', cursive;
+    
+}

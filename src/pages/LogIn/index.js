@@ -8,6 +8,7 @@ export default function LogIn() {
     let history = useHistory();
 
     const [loginState, setLoginState] = useState()
+    const [wrongLogin, setWrongLogin] = useState();
 
     const handleInputChange = event => {
         const { name, value } = event.target;
@@ -18,14 +19,19 @@ export default function LogIn() {
     }
 
     const handleLogIn = event => {
+        // console.log('clicked')
         event.preventDefault();
         API.logInHiker(loginState).then(newHiker => {
             // console.log(newHiker.data)
             switch(newHiker.data){
-                case false:
-                    console.log(newHiker.data)
+                case 'username':
+                    setWrongLogin('No User Found');
+                    // console.log(newHiker.data)
                     break;
-                        
+                case 'password':
+                    setWrongLogin('Incorrect Password');
+                    // console.log(newHiker.data)
+                    break;        
                 default:
                     history.push('/hikers')
                     break;            
@@ -60,6 +66,9 @@ export default function LogIn() {
                                 {/* <lable for = 'password'>Password</lable> */}
                                 <input className = 'login-input-field' name = 'password' type = 'password' placeholder = 'Password' onChange = {handleInputChange}></input>
                             </div>
+                                {wrongLogin && wrongLogin &&
+                                    <p>{wrongLogin}</p>
+                                }
                             <button className = 'login-button' onClick = {handleLogIn}>LogIn</button>
                             <button className = 'login-button' onClick = {handleNewAccount}>Create an Account</button>
                         </form>
