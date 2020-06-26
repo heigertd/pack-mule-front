@@ -1,7 +1,17 @@
 import React from 'react';
+import {useEffect} from 'react';
+import sal from 'sal.js'
 import './style.css'
 
 export default function Hiker(props) {
+
+    useEffect(() => {
+        sal({
+            threshold: .25,
+            once: false,
+        
+        });
+    }, [])
 
     function selectedHiker(){
         var chosenHiker = props.hiker.id;
@@ -9,7 +19,7 @@ export default function Hiker(props) {
     }
 
     return (
-        <div className='border'>
+        <div data-sal='fade' className='border'>
             
                 <img className = 'img' src={require ('../../assets/default.jpg')} alt = 'profil picture' />
             
