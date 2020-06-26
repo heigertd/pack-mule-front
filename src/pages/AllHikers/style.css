@@ -67,6 +67,8 @@
     font-family: 'Expletus Sans', cursive;
 }
 
+@import '../../../node_modules/sal.js/dist/sal.css';
+
 @media only screen and (max-width: 1024px){
     .allhikers-render-div{
         display: flex;

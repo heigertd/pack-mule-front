@@ -6,10 +6,7 @@
     box-shadow: 1px 2px 3px grey;
     background: white;
     height: 10vh;
-}
-
-.img-div{
-    /* width: 20% */
+    --sal-duration: .5s;
 }
 
 .img{
@@ -37,3 +34,5 @@
     /* box-shadow: 1px 2px 3px grey; */
     font-family: 'Expletus Sans', cursive;
 }
+
+@import '../../../node_modules/sal.js/dist/sal.css';

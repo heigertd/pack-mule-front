@@ -3,6 +3,7 @@ import {useHistory} from 'react-router-dom';
 import Hiker from '../../components/Hiker';
 import API from '../../utils/API';
 import './style.css'
+import sal from 'sal.js'
 import NavBar from '../../components/NavBar';
 
 export default function AllHikers() {
@@ -12,6 +13,14 @@ export default function AllHikers() {
     const[clickedHikerState, setClickedHikerState] = useState();
     const[searchState, setSearchState] = useState();
     const[filteredHikersState, setFilteredHikersState] = useState();
+
+    useEffect(() => {
+        sal({
+            threshold: .25,
+            once: false,
+        
+        });
+    }, [])
 
     useEffect(()=>{
         API.getAllHikers().then(res =>{
@@ -76,12 +85,8 @@ export default function AllHikers() {
                     <img className = 'hiker-img' src={require ('../../assets/default.jpg')} alt = 'profil picture' />
                     <div className = 'hiker-info'>
                         <h1>{clickedHikerState.name}</h1> 
-                        {/* <p>{clickedHikerState.hiker_type}</p> */}
-                        {/* <p>Favorite Hike: {clickedHikerState.fav_hike}</p> */}
-                        {/* <p>Experience: {clickedHikerState.experience}</p> */}
                         <p>{clickedHikerState.fun_fact}</p>
                         <p>Contact: {clickedHikerState.email}</p>
-                        {/* <p>Username: {clickedHikerState.username}</p> */}
                     </div>
                     <button className = 'close-button' onClick = {closeUserPopUp}>Close</button>
                 </div>

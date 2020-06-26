@@ -40,11 +40,18 @@ export default function SignUp() {
                         </div>
                         <div className = 'signup-input-div'>
                             {/* <label for='hiker_type'>Type of Hiker</label> */}
-                            <input className = 'signup-input-field' name='hiker_type' type='text' placeholder = 'Type of Hiker' onChange={handleInputChange}></input>
+                            <select className = 'signup-input-field' name='hiker_type' type='text' placeholder = 'Type of Hiker' onChange={handleInputChange}>
+                                <option value='Basic' selected>Basic</option>
+                                <option value='Mule'>Mule</option>
+                            </select>
                         </div>         
                         <div className = 'signup-input-div'>
                             {/* <label for='experience'>Experience</label> */}
-                            <input className = 'signup-input-field' name='experience' type='text' placeholder = 'Experience' onChange={handleInputChange}></input>
+                            <select className = 'signup-input-field' name='experience' placeholder = 'Experience' onChange={handleInputChange}>
+                                <option value='Expert'>Expert</option>
+                                <option value='Intermediate'>Intermediate</option>
+                                <option value='Beginner' selected>Beginner</option>
+                            </select>
                         </div>
                         {/* <div className = 'signup-input-div'>
                             <input className = 'signup-input-field' name= 'fav_hikes' type = 'text' placeholder = 'Favorite Hike' onChange={handleInputChange}></input>
